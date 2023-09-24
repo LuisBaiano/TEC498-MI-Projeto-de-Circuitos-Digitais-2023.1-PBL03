@@ -1,0 +1,35 @@
+//MEALY
+module level_to_pulse (
+    input clk,  // Clock de entrada
+    input L,    // Entrada L
+    output reg P  // Saída P
+);
+
+    // Definição dos estados
+    parameter A = 2'b00;
+    parameter B = 2'b01;
+
+    // Definição do registrador de estado
+    reg [1:0] state;
+    always @(posedge clk)
+    begin
+        if (state == A && L == 1)
+            state <= B;
+        else if (state == A && L == 0)
+            state <= A;
+        else if (state == B && L == 1)
+            state <= B;
+        else if (state == B && L == 0)
+            state <= A;
+    end
+
+    // Geração da saída P
+    always @(state)
+    begin
+        if (state == A && L == 1)
+            P <= 1;
+        else if (state == A || state == B || (state == A && L == 1))
+            P <= 0;
+    end
+
+endmodule

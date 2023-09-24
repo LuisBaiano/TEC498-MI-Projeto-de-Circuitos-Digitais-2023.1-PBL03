@@ -1,0 +1,26 @@
+module Contador(
+    input clk0,
+    input enable,
+    output [1:0] cont
+);
+    wire t0, t1, t2; // Sinais de toggle para os flip-flops T
+    wire ld0, ld1, ld2; // Sinais de load para os flip-flops T
+    wire [1:0] q; // Saídas dos flip-flops T
+
+    Flip_flop_T ff0(.clk(clk0), .t(t0), .q(q[0]), .ld(ld0));
+    Flip_flop_T ff1(.clk(clk0), .t(t1), .q(q[1]), .ld(ld1));
+    Flip_flop_T ff2(.clk(clk0), .t(t2), .q(q[2]), .ld(ld2));
+
+    // Lógica de verilog estrutural para calcular os sinais de toggle e load
+    assign t0 = 1'b1;
+    assign t1 = q[0];
+    assign t2 = q[1];
+
+    assign ld0 = enable;
+    assign ld1 = q[0];
+    assign ld2 = q[1];
+
+    // Saída do contador
+    assign cont = q[1:0];
+
+endmodule

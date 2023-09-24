@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at temp_2_seg.v(11): always construct contains both blocking and non-blocking assignments File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/temp_2_seg.v Line: 11
+Warning (10268): Verilog HDL information at temp_15_seg.v(11): always construct contains both blocking and non-blocking assignments File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/temp_15_seg.v Line: 11

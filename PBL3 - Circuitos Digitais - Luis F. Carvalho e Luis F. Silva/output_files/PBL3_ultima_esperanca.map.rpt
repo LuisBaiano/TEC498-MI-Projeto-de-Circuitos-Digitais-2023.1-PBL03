@@ -1,0 +1,966 @@
+Analysis & Synthesis report for PBL3_ultima_esperanca
+Wed Jun 14 17:15:48 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_6|state
+  9. State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_5|state
+ 10. State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_4|state
+ 11. State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_3|state
+ 12. User-Specified and Inferred Latches
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: Controla_Display:comb_10|level_to_pulse:comb_3
+ 17. Parameter Settings for User Entity Instance: Controla_Display:comb_10|level_to_pulse:comb_4
+ 18. Parameter Settings for User Entity Instance: Controla_Display:comb_10|level_to_pulse:comb_5
+ 19. Parameter Settings for User Entity Instance: Controla_Display:comb_10|level_to_pulse:comb_6
+ 20. Port Connectivity Checks: "Estados:comb_11|Flip_flop_D:Q1"
+ 21. Port Connectivity Checks: "Estados:comb_11|Flip_flop_D:Q0"
+ 22. Port Connectivity Checks: "Estados:comb_11"
+ 23. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_28"
+ 24. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_27"
+ 25. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_26"
+ 26. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_25"
+ 27. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_24"
+ 28. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_23"
+ 29. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_22"
+ 30. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_21"
+ 31. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_20"
+ 32. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_19"
+ 33. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_18"
+ 34. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_17"
+ 35. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_16"
+ 36. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_15"
+ 37. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_14"
+ 38. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_13"
+ 39. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_12"
+ 40. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_11"
+ 41. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_10"
+ 42. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_9"
+ 43. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_8"
+ 44. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_7"
+ 45. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_6"
+ 46. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_5"
+ 47. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_4"
+ 48. Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_3"
+ 49. Port Connectivity Checks: "Divisor_Clock:comb_4"
+ 50. Analysis & Synthesis Messages
+ 51. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Jun 14 17:15:48 2023       ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; PBL3_ultima_esperanca                       ;
+; Top-level Entity Name       ; Principal                                   ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 136                                         ;
+; Total pins                  ; 37                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                 ;
++------------------------------------------------------------------+--------------------+-----------------------+
+; Option                                                           ; Setting            ; Default Value         ;
++------------------------------------------------------------------+--------------------+-----------------------+
+; Device                                                           ; EPM240T100C5       ;                       ;
+; Top-level entity name                                            ; Principal          ; PBL3_ultima_esperanca ;
+; Family name                                                      ; MAX II             ; Cyclone V             ;
+; Use smart compilation                                            ; Off                ; Off                   ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                    ;
+; Enable compact report table                                      ; Off                ; Off                   ;
+; Restructure Multiplexers                                         ; Auto               ; Auto                  ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                   ;
+; Preserve fewer node names                                        ; On                 ; On                    ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable                ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001          ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993             ;
+; State Machine Processing                                         ; Auto               ; Auto                  ;
+; Safe State Machine                                               ; Off                ; Off                   ;
+; Extract Verilog State Machines                                   ; On                 ; On                    ;
+; Extract VHDL State Machines                                      ; On                 ; On                    ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                   ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                  ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                   ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                    ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                    ;
+; Parallel Synthesis                                               ; On                 ; On                    ;
+; NOT Gate Push-Back                                               ; On                 ; On                    ;
+; Power-Up Don't Care                                              ; On                 ; On                    ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                   ;
+; Remove Duplicate Registers                                       ; On                 ; On                    ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                   ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                   ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                   ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                   ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                   ;
+; Ignore SOFT Buffers                                              ; On                 ; On                    ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                   ;
+; Optimization Technique                                           ; Balanced           ; Balanced              ;
+; Carry Chain Length                                               ; 70                 ; 70                    ;
+; Auto Carry Chains                                                ; On                 ; On                    ;
+; Auto Open-Drain Pins                                             ; On                 ; On                    ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                   ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto                  ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                  ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                    ;
+; Allow Synchronous Control Signals                                ; On                 ; On                    ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                   ;
+; Auto Resource Sharing                                            ; Off                ; Off                   ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                    ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                   ;
+; Report Parameter Settings                                        ; On                 ; On                    ;
+; Report Source Assignments                                        ; On                 ; On                    ;
+; Report Connectivity Checks                                       ; On                 ; On                    ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                   ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                     ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation    ;
+; HDL message level                                                ; Level2             ; Level2                ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                   ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                  ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                  ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                   ;
+; Clock MUX Protection                                             ; On                 ; On                    ;
+; Block Design Naming                                              ; Auto               ; Auto                  ;
+; Synthesis Effort                                                 ; Auto               ; Auto                  ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                    ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium                ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                  ;
++------------------------------------------------------------------+--------------------+-----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; Contador.v                       ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Contador.v           ;         ;
+; Display_Bebida.v                 ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Bebida.v     ;         ;
+; Display_Erro.v                   ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Erro.v       ;         ;
+; Display_Valor.v                  ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v      ;         ;
+; Divisor_Clock.v                  ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v      ;         ;
+; Estados.v                        ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v            ;         ;
+; level_to_pulse.v                 ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/level_to_pulse.v     ;         ;
+; Flip_flop_D.v                    ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Flip_flop_D.v        ;         ;
+; Flip_flop_T.v                    ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Flip_flop_T.v        ;         ;
+; Sensores.v                       ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Sensores.v           ;         ;
+; temp_2_seg.v                     ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/temp_2_seg.v         ;         ;
+; temp_5_seg.v                     ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/temp_5_seg.v         ;         ;
+; temp_15_seg.v                    ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/temp_15_seg.v        ;         ;
+; Verificador_Compra.v             ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Verificador_Compra.v ;         ;
+; Principal.v                      ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v          ;         ;
+; Controla_Display.v               ; yes             ; User Verilog HDL File  ; /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v   ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Total logic elements                        ; 136                         ;
+;     -- Combinational with no register       ; 102                         ;
+;     -- Register only                        ; 0                           ;
+;     -- Combinational with a register        ; 34                          ;
+;                                             ;                             ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 55                          ;
+;     -- 3 input functions                    ; 43                          ;
+;     -- 2 input functions                    ; 31                          ;
+;     -- 1 input functions                    ; 7                           ;
+;     -- 0 input functions                    ; 0                           ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 136                         ;
+;     -- arithmetic mode                      ; 0                           ;
+;     -- qfbk mode                            ; 0                           ;
+;     -- register cascade mode                ; 0                           ;
+;     -- synchronous clear/load mode          ; 0                           ;
+;     -- asynchronous clear/load mode         ; 0                           ;
+;                                             ;                             ;
+; Total registers                             ; 34                          ;
+; I/O pins                                    ; 37                          ;
+; Maximum fan-out node                        ; Sensores:comb_9|WideNand0~0 ;
+; Maximum fan-out                             ; 17                          ;
+; Total fan-out                               ; 447                         ;
+; Average fan-out                             ; 2.58                        ;
++---------------------------------------------+-----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                           ; Entity Name        ; Library Name ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------+--------------------+--------------+
+; |Principal                        ; 136 (0)     ; 34           ; 0          ; 37   ; 0            ; 102 (0)      ; 0 (0)             ; 34 (0)           ; 0 (0)           ; 0 (0)      ; |Principal                                                    ; Principal          ; work         ;
+;    |Controla_Display:comb_10|     ; 110 (33)    ; 9            ; 0          ; 0    ; 0            ; 101 (33)     ; 0 (0)             ; 9 (0)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10                           ; Controla_Display   ; work         ;
+;       |Contador:comb_8|           ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|Contador:comb_8           ; Contador           ; work         ;
+;       |Display_Bebida:comb_10|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|Display_Bebida:comb_10    ; Display_Bebida     ; work         ;
+;       |Display_Erro:comb_9|       ; 5 (5)       ; 2            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|Display_Erro:comb_9       ; Display_Erro       ; work         ;
+;       |Display_Valor:comb_11|     ; 53 (53)     ; 0            ; 0          ; 0    ; 0            ; 53 (53)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|Display_Valor:comb_11     ; Display_Valor      ; work         ;
+;       |Verificador_Compra:comb_7| ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|Verificador_Compra:comb_7 ; Verificador_Compra ; work         ;
+;       |level_to_pulse:comb_3|     ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|level_to_pulse:comb_3     ; level_to_pulse     ; work         ;
+;       |level_to_pulse:comb_4|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|level_to_pulse:comb_4     ; level_to_pulse     ; work         ;
+;       |level_to_pulse:comb_5|     ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|level_to_pulse:comb_5     ; level_to_pulse     ; work         ;
+;       |level_to_pulse:comb_6|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Controla_Display:comb_10|level_to_pulse:comb_6     ; level_to_pulse     ; work         ;
+;    |Divisor_Clock:comb_4|         ; 25 (0)      ; 25           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 25 (0)           ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4                               ; Divisor_Clock      ; work         ;
+;       |Flip_flop_T:comb_10|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_10           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_11|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_11           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_12|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_12           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_13|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_13           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_14|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_14           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_15|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_15           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_16|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_16           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_17|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_17           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_18|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_18           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_19|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_19           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_20|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_20           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_21|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_21           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_22|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_22           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_23|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_23           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_24|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_24           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_25|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_25           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_26|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_26           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_27|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_27           ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_3|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_3            ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_4|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_4            ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_5|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_5            ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_6|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_6            ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_7|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_7            ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_8|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_8            ; Flip_flop_T        ; work         ;
+;       |Flip_flop_T:comb_9|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_9            ; Flip_flop_T        ; work         ;
+;    |Sensores:comb_9|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Principal|Sensores:comb_9                                    ; Sensores           ; work         ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_6|state ;
++---------+-----------------------------------------------------------------------+
+; Name    ; state.A                                                               ;
++---------+-----------------------------------------------------------------------+
+; state.B ; 0                                                                     ;
+; state.A ; 1                                                                     ;
++---------+-----------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_5|state ;
++---------+-----------------------------------------------------------------------+
+; Name    ; state.A                                                               ;
++---------+-----------------------------------------------------------------------+
+; state.B ; 0                                                                     ;
+; state.A ; 1                                                                     ;
++---------+-----------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_4|state ;
++---------+-----------------------------------------------------------------------+
+; Name    ; state.A                                                               ;
++---------+-----------------------------------------------------------------------+
+; state.B ; 0                                                                     ;
+; state.A ; 1                                                                     ;
++---------+-----------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_3|state ;
++---------+-----------------------------------------------------------------------+
+; Name    ; state.A                                                               ;
++---------+-----------------------------------------------------------------------+
+; state.B ; 0                                                                     ;
+; state.A ; 1                                                                     ;
++---------+-----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                              ;
++-------------------------------------------------------------+-----------------------------------------------------------+------------------------+
+; Latch Name                                                  ; Latch Enable Signal                                       ; Free of Timing Hazards ;
++-------------------------------------------------------------+-----------------------------------------------------------+------------------------+
+; Controla_Display:comb_10|Display_Valor:comb_11|digitos[1]   ; GND                                                       ; yes                    ;
+; Controla_Display:comb_10|Display_Valor:comb_11|digitos[2]   ; GND                                                       ; yes                    ;
+; Controla_Display:comb_10|Display_Valor:comb_11|digitos[3]   ; GND                                                       ; yes                    ;
+; Controla_Display:comb_10|Display_Valor:comb_11|segmentos[0] ; Controla_Display:comb_10|Display_Valor:comb_11|digitos[3] ; no                     ;
+; Controla_Display:comb_10|Display_Valor:comb_11|segmentos[1] ; Controla_Display:comb_10|Display_Valor:comb_11|digitos[3] ; no                     ;
+; Controla_Display:comb_10|Display_Valor:comb_11|segmentos[2] ; Controla_Display:comb_10|Display_Valor:comb_11|digitos[3] ; no                     ;
+; Controla_Display:comb_10|Display_Valor:comb_11|segmentos[3] ; Controla_Display:comb_10|Display_Valor:comb_11|digitos[3] ; no                     ;
+; Controla_Display:comb_10|Display_Valor:comb_11|segmentos[4] ; Controla_Display:comb_10|Display_Valor:comb_11|digitos[3] ; no                     ;
+; Controla_Display:comb_10|Display_Valor:comb_11|segmentos[5] ; Controla_Display:comb_10|Display_Valor:comb_11|digitos[3] ; no                     ;
+; Controla_Display:comb_10|Display_Valor:comb_11|segmentos[6] ; Controla_Display:comb_10|Display_Valor:comb_11|digitos[3] ; no                     ;
+; Number of user-specified and inferred latches = 10          ;                                                           ;                        ;
++-------------------------------------------------------------+-----------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                   ;
++--------------------------------------------------------------+-----------------------------------------------------------------------+
+; Register name                                                ; Reason for Removal                                                    ;
++--------------------------------------------------------------+-----------------------------------------------------------------------+
+; Controla_Display:comb_10|Display_Erro:comb_9|segmentos[3..5] ; Merged with Controla_Display:comb_10|Display_Erro:comb_9|segmentos[0] ;
+; Controla_Display:comb_10|Display_Erro:comb_9|segmentos[2]    ; Merged with Controla_Display:comb_10|Display_Erro:comb_9|segmentos[1] ;
+; Controla_Display:comb_10|Display_Erro:comb_9|digitos[3]      ; Merged with Controla_Display:comb_10|Display_Erro:comb_9|digitos[2]   ;
+; Controla_Display:comb_10|Display_Erro:comb_9|digitos[2]      ; Stuck at VCC due to stuck port data_in                                ;
+; Controla_Display:comb_10|Display_Erro:comb_9|digitos[1]      ; Merged with Controla_Display:comb_10|Display_Erro:comb_9|digitos[0]   ;
+; Controla_Display:comb_10|Display_Erro:comb_9|segmentos[1,6]  ; Merged with Controla_Display:comb_10|Display_Erro:comb_9|digitos[0]   ;
+; Controla_Display:comb_10|level_to_pulse:comb_6|state~3       ; Lost fanout                                                           ;
+; Controla_Display:comb_10|level_to_pulse:comb_5|state~3       ; Lost fanout                                                           ;
+; Controla_Display:comb_10|level_to_pulse:comb_4|state~3       ; Lost fanout                                                           ;
+; Controla_Display:comb_10|level_to_pulse:comb_3|state~3       ; Lost fanout                                                           ;
+; Total Number of Removed Registers = 13                       ;                                                                       ;
++--------------------------------------------------------------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 34    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Principal|Controla_Display:comb_10|Display_Erro:comb_9|digitos[1]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Principal|Controla_Display:comb_10|Display_Erro:comb_9|segmentos[1]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|Display_Valor:comb_11|segmentos[4] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|Display_Valor:comb_11|segmentos[2] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|Display_Valor:comb_11|segmentos[5] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|digitos[1]                         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|segments[0]                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|Display_Valor:comb_11|digitos[2]   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|segments[6]                        ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|segments[2]                        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|level_to_pulse:comb_6|state        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|level_to_pulse:comb_5|state        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|level_to_pulse:comb_4|state        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Principal|Controla_Display:comb_10|level_to_pulse:comb_3|state        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Controla_Display:comb_10|level_to_pulse:comb_3 ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; A              ; 00    ; Unsigned Binary                                                    ;
+; B              ; 01    ; Unsigned Binary                                                    ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Controla_Display:comb_10|level_to_pulse:comb_4 ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; A              ; 00    ; Unsigned Binary                                                    ;
+; B              ; 01    ; Unsigned Binary                                                    ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Controla_Display:comb_10|level_to_pulse:comb_5 ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; A              ; 00    ; Unsigned Binary                                                    ;
+; B              ; 01    ; Unsigned Binary                                                    ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Controla_Display:comb_10|level_to_pulse:comb_6 ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; A              ; 00    ; Unsigned Binary                                                    ;
+; B              ; 01    ; Unsigned Binary                                                    ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "Estados:comb_11|Flip_flop_D:Q1" ;
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                    ;
++-------+-------+----------+---------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "Estados:comb_11|Flip_flop_D:Q0" ;
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                    ;
++-------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Estados:comb_11"                                                                                 ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; led_press         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; led_aquec         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; led_bebida_1      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; led_bebida_2      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Devolver_dinheiro ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_28"                                                                                                                                            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; ld     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_27"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_26"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_25"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_24"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_23"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_22"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_21"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_20"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_19"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_18"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_17"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_16"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_15"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_14"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_13"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_12"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_11"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_10"                                                                                                                                           ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_9"                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_8"                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_7"                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_6"                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_5"                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_4"                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4|Flip_flop_T:comb_3"                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_4"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; clk1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; clk2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Wed Jun 14 17:15:40 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PBL3_ultima_esperanca -c PBL3_ultima_esperanca
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file Contador.v
+    Info (12023): Found entity 1: Contador File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Contador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Display_Bebida.v
+    Info (12023): Found entity 1: Display_Bebida File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Bebida.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file Display_Erro.v
+    Info (12023): Found entity 1: Display_Erro File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Erro.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Display_Valor.v
+    Info (12023): Found entity 1: Display_Valor File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Divisor_Clock.v
+    Info (12023): Found entity 1: Divisor_Clock File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Estados.v
+    Info (12023): Found entity 1: Estados File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file level_to_pulse.v
+    Info (12023): Found entity 1: level_to_pulse File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/level_to_pulse.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file Flip_flop_D.v
+    Info (12023): Found entity 1: Flip_flop_D File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Flip_flop_D.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Flip_flop_T.v
+    Info (12023): Found entity 1: Flip_flop_T File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Flip_flop_T.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Sensores.v
+    Info (12023): Found entity 1: Sensores File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Sensores.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file temp_2_seg.v
+    Info (12023): Found entity 1: temp_2_seg File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/temp_2_seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file temp_5_seg.v
+    Info (12023): Found entity 1: temp_5_seg File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/temp_5_seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file temp_15_seg.v
+    Info (12023): Found entity 1: temp_15_seg File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/temp_15_seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Verificador_Compra.v
+    Info (12023): Found entity 1: Verificador_Compra File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Verificador_Compra.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Devolver_Cedulas.v
+    Info (12023): Found entity 1: Devolver_Cedulas File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Devolver_Cedulas.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Principal.v
+    Info (12023): Found entity 1: Principal File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Controla_Display.v
+    Info (12023): Found entity 1: Controla_Display File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file teste_temp.v
+Warning (10236): Verilog HDL Implicit Net warning at Divisor_Clock.v(32): created implicit net for "f25" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at Estados.v(57): created implicit net for "reset_Temp_2_1" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at Estados.v(58): created implicit net for "reset_Temp_5" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at Estados.v(62): created implicit net for "Led_dinheiro_1" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at Estados.v(63): created implicit net for "Led_dinheiro_2" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at Principal.v(34): created implicit net for "led_press" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at Principal.v(34): created implicit net for "led_aquec" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at Principal.v(34): created implicit net for "led_bebida_1" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at Principal.v(34): created implicit net for "led_bebida_2" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(7): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(8): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(9): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(10): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(11): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(12): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(13): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(14): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(15): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(16): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(17): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(18): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(19): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 19
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(20): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 20
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(21): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(22): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(23): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(24): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(25): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(26): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 26
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(27): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(28): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 28
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(29): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 29
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(30): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 30
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(31): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 31
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(32): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at Principal.v(22): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at Principal.v(24): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at Principal.v(25): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at Principal.v(26): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 26
+Critical Warning (10846): Verilog HDL Instantiation warning at Principal.v(27): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at Principal.v(30): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 30
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(27): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(28): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 28
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(29): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 29
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(30): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 30
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(33): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 33
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(36): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(39): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 39
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(42): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 42
+Critical Warning (10846): Verilog HDL Instantiation warning at Controla_Display.v(45): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 45
+Critical Warning (10846): Verilog HDL Instantiation warning at Principal.v(32): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at Principal.v(34): instance has no name File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 34
+Info (12127): Elaborating entity "Principal" for the top level hierarchy
+Warning (10034): Output port "leds[6..0]" at Principal.v(8) has no driver File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 8
+Info (12128): Elaborating entity "Divisor_Clock" for hierarchy "Divisor_Clock:comb_4" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 22
+Info (12128): Elaborating entity "Flip_flop_T" for hierarchy "Divisor_Clock:comb_4|Flip_flop_T:comb_3" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Divisor_Clock.v Line: 7
+Info (12128): Elaborating entity "temp_2_seg" for hierarchy "temp_2_seg:comb_5" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 24
+Info (12128): Elaborating entity "temp_5_seg" for hierarchy "temp_5_seg:comb_7" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 26
+Info (12128): Elaborating entity "temp_15_seg" for hierarchy "temp_15_seg:comb_8" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 27
+Info (12128): Elaborating entity "Sensores" for hierarchy "Sensores:comb_9" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 30
+Info (12128): Elaborating entity "Controla_Display" for hierarchy "Controla_Display:comb_10" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 32
+Info (12128): Elaborating entity "level_to_pulse" for hierarchy "Controla_Display:comb_10|level_to_pulse:comb_3" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at level_to_pulse.v(29): variable "L" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/level_to_pulse.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at level_to_pulse.v(31): variable "L" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/level_to_pulse.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at level_to_pulse.v(27): inferring latch(es) for variable "P", which holds its previous value in one or more paths through the always construct File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/level_to_pulse.v Line: 27
+Info (10041): Inferred latch for "P" at level_to_pulse.v(27) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/level_to_pulse.v Line: 27
+Info (12128): Elaborating entity "Verificador_Compra" for hierarchy "Controla_Display:comb_10|Verificador_Compra:comb_7" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 33
+Warning (10230): Verilog HDL assignment warning at Verificador_Compra.v(8): truncated value with size 32 to match size of target (1) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Verificador_Compra.v Line: 8
+Info (12128): Elaborating entity "Contador" for hierarchy "Controla_Display:comb_10|Contador:comb_8" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 36
+Info (12128): Elaborating entity "Display_Erro" for hierarchy "Controla_Display:comb_10|Display_Erro:comb_9" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 39
+Warning (10036): Verilog HDL or VHDL warning at Display_Erro.v(11): object "or_gate" assigned a value but never read File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Erro.v Line: 11
+Info (12128): Elaborating entity "Display_Bebida" for hierarchy "Controla_Display:comb_10|Display_Bebida:comb_10" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 42
+Info (12128): Elaborating entity "Display_Valor" for hierarchy "Controla_Display:comb_10|Display_Valor:comb_11" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Controla_Display.v Line: 45
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(21): variable "V_sense" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(21): variable "sinal_cancel" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(21): variable "chaves_cedulas" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(25): variable "V_sense" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(25): variable "sinal_cancel" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(25): variable "chaves_cedulas" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(29): variable "V_sense" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(29): variable "sinal_cancel" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(29): variable "chaves_cedulas" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(33): variable "V_sense" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(33): variable "sinal_cancel" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(33): variable "chaves_cedulas" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(37): variable "V_sense" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(37): variable "sinal_cancel" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(39): variable "aux_segs" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(41): variable "V_sense" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(41): variable "sinal_cancel" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(41): variable "chaves_cedulas" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(45): variable "V_sense" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 45
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(45): variable "sinal_cancel" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 45
+Warning (10235): Verilog HDL Always Construct warning at Display_Valor.v(45): variable "chaves_cedulas" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 45
+Warning (10240): Verilog HDL Always Construct warning at Display_Valor.v(20): inferring latch(es) for variable "digitos", which holds its previous value in one or more paths through the always construct File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Warning (10240): Verilog HDL Always Construct warning at Display_Valor.v(20): inferring latch(es) for variable "segmentos", which holds its previous value in one or more paths through the always construct File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "segmentos[0]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "segmentos[1]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "segmentos[2]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "segmentos[3]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "segmentos[4]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "segmentos[5]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "segmentos[6]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "digitos[0]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "digitos[1]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "digitos[2]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (10041): Inferred latch for "digitos[3]" at Display_Valor.v(20) File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Info (12128): Elaborating entity "Estados" for hierarchy "Estados:comb_11" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 34
+Warning (10036): Verilog HDL or VHDL warning at Estados.v(62): object "Led_dinheiro_1" assigned a value but never read File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 62
+Warning (10036): Verilog HDL or VHDL warning at Estados.v(63): object "Led_dinheiro_2" assigned a value but never read File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 63
+Warning (10030): Net "Working" at Estados.v(7) has no driver or initial value, using a default initial value '0' File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 7
+Warning (10034): Output port "Devolver_dinheiro" at Estados.v(4) has no driver File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 4
+Info (12128): Elaborating entity "Flip_flop_D" for hierarchy "Estados:comb_11|Flip_flop_D:Q0" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Estados.v Line: 11
+Info (13014): Ignored 3 buffer(s)
+    Info (13019): Ignored 3 SOFT buffer(s)
+Warning (12241): 26 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Controla_Display:comb_10|Display_Valor:comb_11|segmentos[3]" merged with LATCH primitive "Controla_Display:comb_10|Display_Valor:comb_11|segmentos[0]" File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+Warning (13012): Latch Controla_Display:comb_10|Display_Valor:comb_11|segmentos[0] has unsafe behavior File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+Warning (13012): Latch Controla_Display:comb_10|Display_Valor:comb_11|segmentos[1] has unsafe behavior File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chaves_cedulas[0] File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 5
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+Warning (13012): Latch Controla_Display:comb_10|Display_Valor:comb_11|segmentos[2] has unsafe behavior File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chaves_cedulas[0] File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 5
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+Warning (13012): Latch Controla_Display:comb_10|Display_Valor:comb_11|segmentos[4] has unsafe behavior File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+Warning (13012): Latch Controla_Display:comb_10|Display_Valor:comb_11|segmentos[5] has unsafe behavior File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+Warning (13012): Latch Controla_Display:comb_10|Display_Valor:comb_11|segmentos[6] has unsafe behavior File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Display_Valor.v Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Sensores:comb_9|WideNand0 File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Sensores.v Line: 12
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Cancel File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 3
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "leds[0]" is stuck at GND File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 8
+    Warning (13410): Pin "leds[1]" is stuck at GND File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 8
+    Warning (13410): Pin "leds[2]" is stuck at GND File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 8
+    Warning (13410): Pin "leds[3]" is stuck at GND File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 8
+    Warning (13410): Pin "leds[4]" is stuck at GND File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 8
+    Warning (13410): Pin "leds[5]" is stuck at GND File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 8
+    Warning (13410): Pin "leds[6]" is stuck at GND File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 8
+    Warning (13410): Pin "ponto" is stuck at VCC File: /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/Principal.v Line: 13
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 173 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21061): Implemented 136 logic cells
+Info (144001): Generated suppressed messages file /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/output_files/PBL3_ultima_esperanca.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 114 warnings
+    Info: Peak virtual memory: 341 megabytes
+    Info: Processing ended: Wed Jun 14 17:15:48 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /media/luis/SSD_WIn_Linux/PBL3 - Circuitos Digitais - Luis F. Carvalho e Luis F. Silva/output_files/PBL3_ultima_esperanca.map.smsg.
+
+

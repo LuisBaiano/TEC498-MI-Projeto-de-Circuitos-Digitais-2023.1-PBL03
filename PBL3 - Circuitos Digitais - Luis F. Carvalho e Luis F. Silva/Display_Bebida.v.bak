@@ -1,0 +1,22 @@
+module Display_Bebida(
+	input [3:0] botoes,
+	input V_sense,
+	input D_valor,
+	output [3:0] digits,
+	output [6:0] segments,
+	output View_bebida
+);
+
+	assign digits = 4'b1110;
+
+	assign segments = (V_sense == 0 && D_valor == 0) ? (botoes[0]) ? 7'b1111001 :
+    (botoes[1]) ? 7'b0100100 :   
+    (botoes[2]) ? 7'b0110000 : 
+    (botoes[3]) ? 7'b0011001 : 7'b1111111 : 7'b1111111;
+
+	assign View_bebida = (V_sense == 0 && D_valor == 0) ? (botoes[0]) ? 1'b1 :
+    (botoes[1]) ? 1'b1 :   
+    (botoes[2]) ? 1'b1 : 
+    (botoes[3]) ? 1'b1 : 1'b0 : 1'b0;
+
+endmodule

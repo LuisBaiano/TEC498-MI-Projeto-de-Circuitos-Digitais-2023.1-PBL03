@@ -1,0 +1,39 @@
+module Divisor_Clock(clk, clk0, clk1, clk2, clk3);
+
+    input clk; // entrada do clock
+    output clk0, clk1, clk2, clk3; // saidas do clock de deslocamente de multiplexaçao
+    wire f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,f17,f18,f19,f20,f21,f22,f23,f24,fc; //fios para interligar os flipflops e dividir as frequencias
+    
+    Flip_flop_T(clk,1,f1,1);    // 50 MHz
+    Flip_flop_T(f1,f1,f2,1);    // 25 MHz
+    Flip_flop_T(f2,f2,f3,1);    // 12,5 MHz
+    Flip_flop_T(f3,f3,f4,1);    // 6,25 MHz
+    Flip_flop_T(f4,f4,f5,1);    // 3,125 MHz
+    Flip_flop_T(f5,f5,f6,1);    // 1,5625 MHz
+    Flip_flop_T(f6,f6,f7,1);    // 781 KHz
+    Flip_flop_T(f7,f7,f8,1);    // 390 KHz
+    Flip_flop_T(f8,f8,fc,1);    // 195 KHz
+    Flip_flop_T(fc,fc,f9,1);    // 97 Khz
+    Flip_flop_T(f9,f9,f10,1);   // 48 Khz
+    Flip_flop_T(f10,f10,f11,1); // 24 Khz
+    Flip_flop_T(f11,f11,f12,1); // 12 Khz
+    Flip_flop_T(f12,f12,f13,1); // 6 Khz
+    Flip_flop_T(f13,f13,f14,1); // 3 Khz 
+    Flip_flop_T(f14,f14,f15,1); // 1.5 KHz
+    Flip_flop_T(f15,f15,f16,1); // 762 Hz
+    Flip_flop_T(f16,f16,f17,1); // 381 Hz
+    Flip_flop_T(f17,f17,f18,1); // 190 Hz
+    Flip_flop_T(f18,f18,f19,1); // 95 Hz
+    Flip_flop_T(f19,f19,f20,1); // 47 Hz
+    Flip_flop_T(f20,f20,f21,1); // 23 Hz
+    Flip_flop_T(f21,f21,f22,1); // 11 Hz
+    Flip_flop_T(f22,f22,f23,1); // 5 Hz 
+    Flip_flop_T(f23,f23,f24,1); // 2 Hz
+    Flip_flop_T(f24,f24,f25,1); // 1 Hz
+
+    assign clk0 = f10; //48khz USADO PARA MULTIPLEXAR O DISPLAY
+    assign clk1 = f16; 
+	 assign clk2 = f20;  //762Hz 
+    assign clk3 = f24; //2hz  USADO PARA FILTAR INFORMAÇAO DO BOTAO E EXIBIR POR UM PERIODO UM ERRO DE COMPRA OU A BEBIDA SELECIONADA PELO USUARIO
+	
+endmodule 

@@ -1,0 +1,20 @@
+
+State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_6|state
+Name state.A 
+state.B 0 
+state.A 1 
+
+State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_5|state
+Name state.A 
+state.B 0 
+state.A 1 
+
+State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_4|state
+Name state.A 
+state.B 0 
+state.A 1 
+
+State Machine - |Principal|Controla_Display:comb_10|level_to_pulse:comb_3|state
+Name state.A 
+state.B 0 
+state.A 1 

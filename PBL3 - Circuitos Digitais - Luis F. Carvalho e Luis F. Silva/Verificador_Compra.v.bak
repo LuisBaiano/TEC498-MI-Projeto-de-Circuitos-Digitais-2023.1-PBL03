@@ -1,0 +1,14 @@
+module Verificador_Compra(
+    input [2:0] chaves_cedulas,  // Entrada para as chaves de cedulas
+    input [3:0] bt,             // Entrada para o botão
+    output D_valor              // Saída D_valor
+);
+
+    // Lógica para atribuir valor a D_valor com base nas chaves de cedulas e no botão
+    assign D_valor =(chaves_cedulas == 3'b001 && bt[3]) ? 0 :   // CAFÉ EXPRESSO   (B3)
+                    (chaves_cedulas == 3'b010 && bt[1]) ? 0 :   // CAFÉ COM LEITE  (B2)
+                    (chaves_cedulas == 3'b110 && bt[2]) ? 0 :   // CHÁ DE CAMOMILA (B1)
+                    (chaves_cedulas == 3'b100 && bt[0]) ? 0 :   // CAPUCCINO       (B0)
+                    (chaves_cedulas == 3'b000 || !bt[3] && !bt[2] && !bt[1] && !bt[0]) ? 0 : 1;
+
+endmodule

@@ -1,0 +1,39 @@
+module Controla_Display(
+	input clk0, clk3, V_sense,              // Entradas de clock e V_sense
+	input [2:0] chaves_cedulas,             // Entrada para as chaves de cédulas
+	input [3:0] botoes,                     // Entrada para os botões
+	output reg [3:0] digitos,                // Saída para os dígitos
+	output reg [6:0] segments                // Saída para os segmentos
+);
+	wire D_valor, Exibe_Bebida, Exibe_Valor; // Fios (wires) para sinais auxiliares
+	wire [3:0] bt;                           // Fio (wire) para os botões
+	wire [2:0] select;                       // Fio (wire) para a seleção
+	wire [3:0] digito1, digito2, digito3;    // Fios (wires) para os dígitos
+	wire [6:0] segmentos1, segmentos2, segmentos3; // Fios (wires) para os segmentos
+
+	// Conversão de nível para pulso para cada botão usando o clock clk3
+	level_to_pulse(clk3, botoes[0], bt[0]);
+	level_to_pulse(clk3, botoes[1], bt[1]);
+	level_to_pulse(clk3, botoes[2], bt[2]);
+	level_to_pulse(clk3, botoes[3], bt[3]);
+
+	// Verifica a compra com base nas chaves de cédulas e botões
+	Verificador_Compra(chaves_cedulas, bt, D_valor);
+
+	// Contador para a seleção de dígitos
+	Contador(clk0, 1'b1, select);
+
+	// Módulo de exibição de erro do display
+	Display_Erro(clk0, V_sense, D_valor, select, digito1, segmentos1);
+
+	// Módulo de exibição de bebida do display
+	Display_Bebida(bt, V_sense, D_valor, digito2, segmentos2, Exibe_Bebida);
+
+	// Módulo de exibição de valor do display
+	Display_Valor(clk0, chaves_cedulas, V_sense, D_valor, select, digito3, segmentos3, Exibe_Valor);
+
+	// Lógica para atribuir os valores corretos aos dígitos e segmentos de acordo com as condições
+	assign digitos = (V_sense | D_valor) ? digito1 : (Exibe_Bebida ? digito2 : (Exibe_Valor ? digito3 : 4'b1111));
+	assign segments = (V_sense | D_valor) ? segmentos1 : (Exibe_Bebida ? segmentos2 : (Exibe_Valor ? segmentos3 : 7'b1111111));
+
+endmodule

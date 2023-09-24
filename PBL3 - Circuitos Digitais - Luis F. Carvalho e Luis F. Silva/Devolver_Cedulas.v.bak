@@ -1,0 +1,28 @@
+module Devolver_Cedulas(
+    input D_valor, Devolver_dinheiro, Chave_cancelar,
+    output led_2,Led_3,
+    output[6:0]segmentos
+);
+
+wire Devolver_Cedulas;
+or(Devolver_Cedulas, D_valor, Devolver_dinheiro, Chave_cancelar);
+
+assign led_2 = Devolver_Cedulas;
+assign Led_3 = Devolver_Cedulas;
+
+	//segmento A
+	or(segmentos[6], 1'b1);
+	//segmento B
+	or(segmentos[5], 1'b1);
+	//segmento C
+	or(segmentos[4], 1'b1);
+	//segmento D
+	or(segmentos[3], 1'b1);	
+	//segmento E
+	or(segmentos[2], 1'b1);
+	//segmento F
+	or(segmentos[1], 1'b1);
+	//segmento G
+	or(segmentos[0], !Devolver_Cedulas);
+
+endmodule

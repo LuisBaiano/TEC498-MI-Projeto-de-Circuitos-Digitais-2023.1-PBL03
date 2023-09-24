@@ -1,0 +1,309 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_13|q'
+Slack : -8.166
+TNS   : -21.934
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_16|q'
+Slack : 0.028
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_26|q'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_18|q'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_12|q'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_19|q'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_14|q'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_6|q'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_8|q'
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_22|q'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_10|q'
+Slack : 0.230
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_4|q'
+Slack : 0.238
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_20|q'
+Slack : 0.239
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_24|q'
+Slack : 0.247
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_5|q'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_11|q'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_9|q'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_25|q'
+Slack : 0.449
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_17|q'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_21|q'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_7|q'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_3|q'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_23|q'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Setup 'Divisor_Clock:comb_4|Flip_flop_T:comb_15|q'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Setup 'clk'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_13|q'
+Slack : -3.020
+TNS   : -3.020
+
+Type  : Hold 'clk'
+Slack : -1.720
+TNS   : -1.720
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_3|q'
+Slack : -1.297
+TNS   : -1.297
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_9|q'
+Slack : -1.089
+TNS   : -1.089
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_23|q'
+Slack : -1.078
+TNS   : -1.078
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_21|q'
+Slack : -1.061
+TNS   : -1.061
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_7|q'
+Slack : -0.953
+TNS   : -0.953
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_19|q'
+Slack : -0.865
+TNS   : -0.865
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_15|q'
+Slack : -0.686
+TNS   : -0.686
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_17|q'
+Slack : -0.653
+TNS   : -0.653
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_25|q'
+Slack : -0.651
+TNS   : -0.651
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_11|q'
+Slack : -0.615
+TNS   : -0.615
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_26|q'
+Slack : -0.565
+TNS   : -0.565
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_18|q'
+Slack : -0.552
+TNS   : -0.552
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_12|q'
+Slack : -0.544
+TNS   : -0.544
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_4|q'
+Slack : -0.507
+TNS   : -0.507
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_20|q'
+Slack : -0.505
+TNS   : -0.505
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_24|q'
+Slack : -0.505
+TNS   : -0.505
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_10|q'
+Slack : -0.502
+TNS   : -0.502
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_5|q'
+Slack : -0.502
+TNS   : -0.502
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_14|q'
+Slack : -0.501
+TNS   : -0.501
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_22|q'
+Slack : -0.499
+TNS   : -0.499
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_6|q'
+Slack : -0.498
+TNS   : -0.498
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_8|q'
+Slack : -0.498
+TNS   : -0.498
+
+Type  : Hold 'Divisor_Clock:comb_4|Flip_flop_T:comb_16|q'
+Slack : -0.254
+TNS   : -0.254
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_10|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_11|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_12|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_13|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_14|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_15|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_16|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_17|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_18|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_19|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_20|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_21|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_22|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_23|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_24|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_25|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_26|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_27|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_8|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Divisor_Clock:comb_4|Flip_flop_T:comb_9|q'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

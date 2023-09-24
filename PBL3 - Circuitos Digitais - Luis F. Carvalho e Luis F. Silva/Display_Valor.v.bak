@@ -1,0 +1,42 @@
+module Display_Valor (
+	input [2:0] chaves_cedulas,   // Entrada de seleção das chaves ou cédulas
+	input V_sense,                // Entrada para verificar a sensibilidade V
+	input [2:0] select,           // Entrada de seleção
+	output [3:0] digitos,         // Saída para os dígitos
+	output [6:0] segmentos,       // Saída para os segmentos
+	output Exibe_Valor            // Saída para exibir o valor
+);
+
+	wire [6:0] aux_segs;           // Fio (wire) para armazenar temporariamente os segmentos
+	
+	// Lógica para atribuir valores aos segmentos com base em V_sense e chaves_cedulas
+	assign aux_segs = (V_sense == 0) ? (chaves_cedulas == 3'b100) ? 7'b1111001 :  
+    (chaves_cedulas == 3'b010) ? 7'b0100100 :  
+    (chaves_cedulas == 3'b110) ? 7'b0010010 :  
+    7'b1111111 : 7'b1111111;
+	
+	// Lógica para atribuir valores aos dígitos com base em select, V_sense e chaves_cedulas
+	assign digitos = (select == 3'b000 && V_sense == 1'b0   && (chaves_cedulas == 3'b001 || chaves_cedulas == 3'b101 || chaves_cedulas == 3'b011 || chaves_cedulas == 3'b111)) ? 4'b1110 :
+	(select == 3'b001 && V_sense == 1'b0   && chaves_cedulas == 3'b001) ? 4'b1101 :
+	(select == 3'b010 && V_sense == 1'b0   && chaves_cedulas == 3'b101) ? 4'b1101 :
+	(select == 3'b011 && V_sense == 1'b0   && chaves_cedulas == 3'b011) ? 4'b1101 :
+	(select == 3'b100 && V_sense == 1'b0) ? 4'b1110 :
+	(select == 3'b101 && V_sense == 1'b0 && chaves_cedulas == 3'b111) ? 4'b1101 : 'b0;
+	
+	// Lógica para atribuir valores aos segmentos com base em select, V_sense e chaves_cedulas
+	assign segmentos = (select == 3'b000 && V_sense == 1'b0 && (chaves_cedulas == 3'b001 || chaves_cedulas == 3'b101 || chaves_cedulas == 3'b011 || chaves_cedulas == 3'b111) )? 7'b1000000:
+	(select == 3'b001 && V_sense == 1'b0 && chaves_cedulas == 3'b001 ) ? 7'b1111001:
+	(select == 3'b010 && V_sense == 1'b0 && chaves_cedulas == 3'b101 ) ? 7'b0100100:
+	(select == 3'b011 && V_sense == 1'b0 && chaves_cedulas == 3'b011 ) ? 7'b0010010:
+	(select == 3'b100 && V_sense == 1'b0) ? aux_segs:
+	(select == 3'b101 && V_sense == 1'b0 && chaves_cedulas == 3'b111 ) ? 7'b1000000: 1'b0;
+	
+	// Lógica para atribuir valor a Exibe_Valor com base em select, V_sense e chaves_cedulas
+	assign Exibe_Valor = (select == 3'b000 && V_sense==1'b0 && (chaves_cedulas == 3'b001 || chaves_cedulas == 3'b101 || chaves_cedulas == 3'b011 || chaves_cedulas == 3'b111 ) ) ? 1'b1:
+	(select == 3'b001 && V_sense == 1'b0 && chaves_cedulas == 3'b001)? 1'b1:
+	(select == 3'b010 && V_sense == 1'b0 && chaves_cedulas == 3'b101)? 1'b1:
+	(select == 3'b011 && V_sense == 1'b0 && chaves_cedulas == 3'b011)? 1'b1:
+	(select == 3'b100 && V_sense == 1'b0) ? 1'b1:
+	(select == 3'b101 && V_sense == 1'b0 && chaves_cedulas == 3'b111)? 1'b1 : 1'b0;
+
+endmodule

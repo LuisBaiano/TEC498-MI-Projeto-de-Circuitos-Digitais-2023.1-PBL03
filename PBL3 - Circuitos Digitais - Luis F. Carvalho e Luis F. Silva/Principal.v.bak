@@ -1,0 +1,43 @@
+module Principal(
+
+    input clk, Cancel, 
+    input [2:0]chaves_sensores, chaves_cedulas,
+    input [3:0]botoes,
+    output [9:0]leds,
+	output LED_Verm, LED_Verde,
+    output[6:0]segmentos
+
+);
+    or(ponto, 1'b1); //desliga os pontos
+    wire clk0, clk1, clk2, clk3; //fios para as saídas do Divisor de Clock
+    wire [1:0]Estado_atual; //pega qual o estado que deve ser processado
+    wire [7:0]cedulas;
+    wire b0, b1, b2, b3;
+    wire V_sense, D_valor, Devolver_dinheiro; //variáveis para transição entre os estados
+
+    wire Temp_2, Temp_2_1, Temp_5, Temp_15; //fios de saída dos temporizadores 
+    wire reset_Temp_2, reset_Temp_15; //reset dos temporizadores
+
+    Divisor_Clock(clk, clk0, clk1, clk2, clk3);
+
+    temp_2_seg(clk3, reset_Temp_2, Temp_2); // Temporizador da pressurização da bebida
+    temp_2_seg(clk3, !Temp_2, Temp_2_1); // Temporizador do aquecimento da água da bebida
+    temp_5_seg(clk3, !Temp_2_1, Temp_5); // Temporizador do dispenser de bebida
+
+    temp_15_seg(clk3, reset_Temp_15, Temp_15);//Temporizador para resetar o estado de venda
+
+    Debouncer(!botoes[0], clk2, b0); //Café expresso
+    Debouncer(!botoes[1], clk2, b1); //Café com leite
+    Debouncer(!botoes[2], clk2, b2); //Chá de Camomila
+    Debouncer(!botoes[3], clk2, b3); //Capuccino
+
+
+    Sensores(chaves_sensores, V_sense, leds[7], leds[8], leds[9]); //Verifica os estados dos sensores
+
+    Verificador_Venda(chaves_cedulas,cedulas,b0,b1,b2,b3,D_valor); //Faz o combinacional dos valores das cédulas e confirma se o valor é compativel com a bebida escolhida
+
+    Estados(clk3, Cancel, D_valor, V_sense, Temp_2, Temp_2_1, Temp_5, Temp_15, Estado_atual, LED_Verm, LED_Verde, leds[6], leds[5], leds[0], leds[1], reset_Temp_2, reset_Temp_15, Devolver_dinheiro);
+
+    Devolver_Cedulas(D_valor, Devolver_dinheiro, Cancel, leds[2], leds[3], segmentos);
+	
+endmodule

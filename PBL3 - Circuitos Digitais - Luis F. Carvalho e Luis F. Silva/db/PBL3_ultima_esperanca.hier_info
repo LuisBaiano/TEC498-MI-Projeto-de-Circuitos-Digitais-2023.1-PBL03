@@ -1,0 +1,589 @@
+|Principal
+clk => clk.IN1
+Cancel => Cancel.IN2
+chaves_sensores[0] => chaves_sensores[0].IN1
+chaves_sensores[1] => chaves_sensores[1].IN1
+chaves_sensores[2] => chaves_sensores[2].IN1
+chaves_cedulas[0] => chaves_cedulas[0].IN1
+chaves_cedulas[1] => chaves_cedulas[1].IN1
+chaves_cedulas[2] => chaves_cedulas[2].IN1
+botoes[0] => botoes[0].IN1
+botoes[1] => botoes[1].IN1
+botoes[2] => botoes[2].IN1
+botoes[3] => botoes[3].IN1
+digitos[0] << Controla_Display:comb_10.port6
+digitos[1] << Controla_Display:comb_10.port6
+digitos[2] << Controla_Display:comb_10.port6
+digitos[3] << Controla_Display:comb_10.port6
+leds[0] << <GND>
+leds[1] << <GND>
+leds[2] << <GND>
+leds[3] << <GND>
+leds[4] << <GND>
+leds[5] << <GND>
+leds[6] << <GND>
+leds[7] << Sensores:comb_9.port2
+leds[8] << Sensores:comb_9.port3
+leds[9] << Sensores:comb_9.port4
+LED_Verm << Controla_Display:comb_10.port9
+LED_Verde << Controla_Display:comb_10.port10
+LED_Azul << Controla_Display:comb_10.port11
+segmentos[0] << Controla_Display:comb_10.port7
+segmentos[1] << Controla_Display:comb_10.port7
+segmentos[2] << Controla_Display:comb_10.port7
+segmentos[3] << Controla_Display:comb_10.port7
+segmentos[4] << Controla_Display:comb_10.port7
+segmentos[5] << Controla_Display:comb_10.port7
+segmentos[6] << Controla_Display:comb_10.port7
+ponto << <VCC>
+
+
+|Principal|Divisor_Clock:comb_4
+clk => clk.IN1
+clk0 <= f10.DB_MAX_OUTPUT_PORT_TYPE
+clk1 <= f16.DB_MAX_OUTPUT_PORT_TYPE
+clk2 <= f20.DB_MAX_OUTPUT_PORT_TYPE
+clk3 <= f24.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_3
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_4
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_5
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_6
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_7
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_8
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_9
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_10
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_11
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_12
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_13
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_14
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_15
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_16
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_17
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_18
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_19
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_20
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_21
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_22
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_23
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_24
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_25
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_26
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_27
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|Divisor_Clock:comb_4|Flip_flop_T:comb_28
+clk => q~reg0.CLK
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ld => q.OUTPUTSELECT
+
+
+|Principal|temp_2_seg:comb_5
+clk => Temp_2~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+reset => Temp_2~reg0.ACLR
+reset => cont[0].ACLR
+reset => cont[1].ACLR
+Temp_2 <= Temp_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|temp_2_seg:comb_6
+clk => Temp_2~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+reset => Temp_2~reg0.ACLR
+reset => cont[0].ACLR
+reset => cont[1].ACLR
+Temp_2 <= Temp_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|temp_5_seg:comb_7
+clk => Temp_5~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+reset => Temp_5~reg0.ACLR
+reset => cont[0].ACLR
+reset => cont[1].ACLR
+reset => cont[2].ACLR
+Temp_5 <= Temp_5~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|temp_15_seg:comb_8
+clk => Temp_15~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+reset => Temp_15~reg0.ACLR
+reset => cont[0].ACLR
+reset => cont[1].ACLR
+reset => cont[2].ACLR
+reset => cont[3].ACLR
+Temp_15 <= Temp_15~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Sensores:comb_9
+chaves_sensores[0] => comb.DATAIN
+chaves_sensores[0] => WideNand0.IN0
+chaves_sensores[1] => comb.DATAIN
+chaves_sensores[1] => WideNand0.IN1
+chaves_sensores[2] => comb.DATAIN
+chaves_sensores[2] => WideNand0.IN2
+V_sense <= WideNand0.DB_MAX_OUTPUT_PORT_TYPE
+led7 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+led8 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+led9 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10
+clk0 => clk0.IN2
+clk3 => clk3.IN4
+sinal_cancel => sinal_cancel.IN2
+V_sense => V_sense.IN3
+chaves_cedulas[0] => chaves_cedulas[0].IN3
+chaves_cedulas[1] => chaves_cedulas[1].IN3
+chaves_cedulas[2] => chaves_cedulas[2].IN3
+botoes[0] => botoes[0].IN1
+botoes[1] => botoes[1].IN1
+botoes[2] => botoes[2].IN1
+botoes[3] => botoes[3].IN1
+digitos[0] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+digitos[1] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+digitos[2] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+digitos[3] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+Valor_verificado <= D_valor.DB_MAX_OUTPUT_PORT_TYPE
+LED_Verm <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+LED_Verde <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED_Azul <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|level_to_pulse:comb_3
+clk => state~1.DATAIN
+L => always0.IN0
+L => always1.IN0
+L => always0.IN0
+L => always0.IN0
+P <= P$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|level_to_pulse:comb_4
+clk => state~1.DATAIN
+L => always0.IN0
+L => always1.IN0
+L => always0.IN0
+L => always0.IN0
+P <= P$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|level_to_pulse:comb_5
+clk => state~1.DATAIN
+L => always0.IN0
+L => always1.IN0
+L => always0.IN0
+L => always0.IN0
+P <= P$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|level_to_pulse:comb_6
+clk => state~1.DATAIN
+L => always0.IN0
+L => always1.IN0
+L => always0.IN0
+L => always0.IN0
+P <= P$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|Verificador_Compra:comb_7
+chaves_cedulas[0] => Equal0.IN0
+chaves_cedulas[0] => Equal1.IN2
+chaves_cedulas[0] => Equal2.IN1
+chaves_cedulas[0] => Equal3.IN2
+chaves_cedulas[0] => Equal4.IN2
+chaves_cedulas[1] => Equal0.IN2
+chaves_cedulas[1] => Equal1.IN0
+chaves_cedulas[1] => Equal2.IN0
+chaves_cedulas[1] => Equal3.IN1
+chaves_cedulas[1] => Equal4.IN1
+chaves_cedulas[2] => Equal0.IN1
+chaves_cedulas[2] => Equal1.IN1
+chaves_cedulas[2] => Equal2.IN2
+chaves_cedulas[2] => Equal3.IN0
+chaves_cedulas[2] => Equal4.IN0
+bt[0] => D_valor.IN1
+bt[0] => D_valor.IN1
+bt[1] => D_valor.IN1
+bt[1] => D_valor.IN1
+bt[2] => D_valor.IN1
+bt[2] => D_valor.IN0
+bt[3] => D_valor.IN1
+bt[3] => D_valor.IN1
+D_valor <= D_valor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|Contador:comb_8
+out1 => select[0]~reg0.CLK
+out1 => select[1]~reg0.CLK
+out1 => select[2]~reg0.CLK
+select[0] <= select[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+select[1] <= select[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+select[2] <= select[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|Display_Erro:comb_9
+clk0 => segmentos[0]~reg0.CLK
+clk0 => segmentos[1]~reg0.CLK
+clk0 => segmentos[2]~reg0.CLK
+clk0 => segmentos[3]~reg0.CLK
+clk0 => segmentos[4]~reg0.CLK
+clk0 => segmentos[5]~reg0.CLK
+clk0 => segmentos[6]~reg0.CLK
+clk0 => digitos[0]~reg0.CLK
+clk0 => digitos[1]~reg0.CLK
+clk0 => digitos[2]~reg0.CLK
+clk0 => digitos[3]~reg0.CLK
+V_sense => and_gates.IN0
+V_sense => and_gates[1].IN1
+D_valor => and_gates.IN1
+D_valor => and_gates[2].IN1
+select[0] => Equal0.IN2
+select[0] => Equal1.IN0
+select[0] => Equal2.IN2
+select[1] => Equal0.IN1
+select[1] => Equal1.IN2
+select[1] => Equal2.IN0
+select[2] => Equal0.IN0
+select[2] => Equal1.IN1
+select[2] => Equal2.IN1
+digitos[0] <= digitos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digitos[1] <= digitos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digitos[2] <= digitos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digitos[3] <= digitos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[0] <= segmentos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[1] <= segmentos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[2] <= segmentos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[3] <= segmentos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[4] <= segmentos[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[5] <= segmentos[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[6] <= segmentos[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|Display_Bebida:comb_10
+sinal_cancel => segments.IN1
+botoes[0] => segments.IN1
+botoes[0] => View_bebida.OUTPUTSELECT
+botoes[1] => segments.IN1
+botoes[1] => View_bebida.OUTPUTSELECT
+botoes[2] => segments.IN1
+botoes[2] => View_bebida.OUTPUTSELECT
+botoes[3] => segments.IN1
+botoes[3] => View_bebida.DATAA
+chaves_cedulas[0] => Equal0.IN2
+chaves_cedulas[0] => Equal1.IN2
+chaves_cedulas[0] => Equal2.IN1
+chaves_cedulas[0] => Equal3.IN0
+chaves_cedulas[1] => Equal0.IN1
+chaves_cedulas[1] => Equal1.IN0
+chaves_cedulas[1] => Equal2.IN0
+chaves_cedulas[1] => Equal3.IN2
+chaves_cedulas[2] => Equal0.IN0
+chaves_cedulas[2] => Equal1.IN1
+chaves_cedulas[2] => Equal2.IN2
+chaves_cedulas[2] => Equal3.IN1
+V_sense => segments.IN0
+D_valor => segments.IN1
+digits[0] <= <GND>
+digits[1] <= <VCC>
+digits[2] <= <VCC>
+digits[3] <= <VCC>
+segments[0] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+View_bebida <= View_bebida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Controla_Display:comb_10|Display_Valor:comb_11
+sinal_cancel => always0.IN1
+sinal_cancel => always0.IN1
+sinal_cancel => always0.IN1
+sinal_cancel => always0.IN1
+sinal_cancel => always0.IN1
+sinal_cancel => always0.IN1
+sinal_cancel => always0.IN1
+chaves_cedulas[0] => Equal0.IN0
+chaves_cedulas[0] => Equal1.IN2
+chaves_cedulas[0] => Equal2.IN1
+chaves_cedulas[0] => Equal4.IN2
+chaves_cedulas[0] => Equal5.IN1
+chaves_cedulas[0] => Equal6.IN2
+chaves_cedulas[0] => Equal7.IN2
+chaves_cedulas[1] => Equal0.IN2
+chaves_cedulas[1] => Equal1.IN0
+chaves_cedulas[1] => Equal2.IN0
+chaves_cedulas[1] => Equal4.IN1
+chaves_cedulas[1] => Equal5.IN2
+chaves_cedulas[1] => Equal6.IN1
+chaves_cedulas[1] => Equal7.IN1
+chaves_cedulas[2] => Equal0.IN1
+chaves_cedulas[2] => Equal1.IN1
+chaves_cedulas[2] => Equal2.IN2
+chaves_cedulas[2] => Equal4.IN0
+chaves_cedulas[2] => Equal5.IN0
+chaves_cedulas[2] => Equal6.IN0
+chaves_cedulas[2] => Equal7.IN0
+V_sense => always0.IN1
+V_sense => always0.IN1
+V_sense => always0.IN1
+V_sense => always0.IN1
+V_sense => always0.IN1
+V_sense => always0.IN1
+V_sense => always0.IN1
+V_sense => aux_segs[6].OUTPUTSELECT
+V_sense => aux_segs[5].OUTPUTSELECT
+V_sense => aux_segs[4].OUTPUTSELECT
+V_sense => aux_segs[3].OUTPUTSELECT
+V_sense => aux_segs[2].OUTPUTSELECT
+V_sense => aux_segs[1].OUTPUTSELECT
+V_sense => aux_segs[0].OUTPUTSELECT
+select[0] => Equal3.IN2
+select[0] => Equal8.IN0
+select[0] => Equal9.IN2
+select[0] => Equal10.IN1
+select[0] => Equal11.IN2
+select[0] => Equal12.IN1
+select[0] => Equal13.IN2
+select[1] => Equal3.IN1
+select[1] => Equal8.IN2
+select[1] => Equal9.IN0
+select[1] => Equal10.IN0
+select[1] => Equal11.IN1
+select[1] => Equal12.IN2
+select[1] => Equal13.IN1
+select[2] => Equal3.IN0
+select[2] => Equal8.IN1
+select[2] => Equal9.IN1
+select[2] => Equal10.IN2
+select[2] => Equal11.IN0
+select[2] => Equal12.IN0
+select[2] => Equal13.IN0
+digitos[0] <= <VCC>
+digitos[1] <= digitos[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+digitos[2] <= digitos[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+digitos[3] <= digitos[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[0] <= segmentos[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[1] <= segmentos[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[2] <= segmentos[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[3] <= segmentos[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[4] <= segmentos[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[5] <= segmentos[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[6] <= segmentos[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Exibe_Valor <= Exibe_Valor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Estados:comb_11
+clk3 => clk3.IN2
+Cancel => WideAnd0.IN2
+Cancel => WideAnd3.IN2
+D_valor => ~NO_FANOUT~
+V_sense => WideAnd0.IN3
+V_sense => WideAnd2.IN2
+V_sense => WideAnd3.IN3
+V_sense => WideAnd5.IN2
+V_sense => WideAnd6.IN2
+V_sense => WideAnd7.IN2
+V_sense => WideAnd8.IN2
+V_sense => WideAnd9.IN2
+Temp_2 => WideAnd6.IN3
+Temp_2 => led_press.DATAIN
+Temp_2_1 => WideAnd7.IN3
+Temp_2_1 => led_aquec.DATAIN
+Temp_5 => WideAnd8.IN3
+Temp_5 => WideAnd9.IN3
+Temp_5 => led_bebida_1.DATAIN
+Temp_5 => led_bebida_2.DATAIN
+Temp_15 => WideAnd2.IN3
+led_press <= Temp_2.DB_MAX_OUTPUT_PORT_TYPE
+led_aquec <= Temp_2_1.DB_MAX_OUTPUT_PORT_TYPE
+led_bebida_1 <= Temp_5.DB_MAX_OUTPUT_PORT_TYPE
+led_bebida_2 <= Temp_5.DB_MAX_OUTPUT_PORT_TYPE
+reset_Temp_2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+reset_Temp_15 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Devolver_dinheiro <= <GND>
+
+
+|Principal|Estados:comb_11|Flip_flop_D:Q0
+d => q~reg0.DATAIN
+clock => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Principal|Estados:comb_11|Flip_flop_D:Q1
+d => q~reg0.DATAIN
+clock => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
